@@ -53,6 +53,8 @@ INSTALLED_APPS = [
     'ioteca_service_apps.auths',
     'ioteca_service_apps.auths_api',
 
+    'apps.financiero',
+
 ]
 
 MIDDLEWARE_CLASSES = [
