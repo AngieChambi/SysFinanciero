@@ -1,0 +1,58 @@
+<md-dialog aria-label="Form" ng-cloak class="main" md-theme="{{ dynamicTheme }}">
+    <form name='myform'>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>
+                    <span ng-hide="ahorro.id == null">Editar </span>
+                    <span ng-hide="ahorro.id">Nueva </span>
+                    ahorro
+                </h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="cancel()">
+                    <ng-md-icon icon="close" aria-label="Close dialog"></ng-md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-dialog-content>
+            <md-progress-circular layout-fill md-mode="indeterminate" ng-hide="true"></md-progress-circular>
+            <div class="md-dialog-content">
+                <div layout-gt-sm="row">
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Importe</label>
+                        <input ng-model="ahorro.importe" required>
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Observacion</label>
+                        <input ng-model="ahorro.observacion" required>
+                    </md-input-container>
+                </div>
+                <div layout-gt-sm="row">
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Socio</label>
+                        <input ng-model="ahorro.socio" required>
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Tipo de Ahorro</label>
+                        <input ng-model="ahorro.tipo_ahorro" required>
+                    </md-input-container>
+                </div>
+                <div layout-gt-sm="row">
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Empleado</label>
+                        <input ng-model="ahorro.empleado" required>
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Serv de Financiero</label>
+                        <input ng-model="ahorro.serv_financiero" required>
+                    </md-input-container>
+                </div>
+        </md-dialog-content>
+        <md-dialog-actions layout="row">
+            <span flex></span>
+            <md-button type="reset" ng-click="cancel()" class="md-raised">Salir</md-button>
+            <md-button type="submit" ng-click="save()" class="md-raised md-primary" ng-disabled="!myform.$valid">
+                Guardar
+            </md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>
