@@ -72,8 +72,23 @@ app
         }
     })
 
-
-    ;
+     //==================================
+    // App layout base gperfil
+    //==================================
+    .state('financiero', {
+        url: '/financiero',
+        views: {
+            '': {
+                templateUrl: 'app/views/layout.html'
+            },
+            'aside': {
+                templateUrl: 'app/views/aside.html'
+            },
+            'content': {
+                templateUrl: 'app/views/content.html'
+            }
+        }
+    });
 
 
 });

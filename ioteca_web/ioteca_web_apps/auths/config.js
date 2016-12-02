@@ -1,10 +1,12 @@
-﻿
-var authsUrl = 'http://localhost:9001/api/auths/';
+﻿var baseUrl = 'http://localhost:9001';
+var authsUrl = baseUrl+'/api/auths/';
+var financieroUrl = baseUrl+'/api/financiero/';
 
 
 var config = {
     
     authsUrl: authsUrl,
+    financieroUrl: financieroUrl,
 
 
 };

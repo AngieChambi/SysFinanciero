@@ -9,11 +9,13 @@
                           <ng-md-icon icon="keyboard_arrow_down"></ng-md-icon>
                         </span>
                         <i class="icon mdi-action-subject i-20"></i>
+                        <ng-md-icon size="18" icon="{{menu.icon}}"></ng-md-icon>
                         <span class="font-normal">{{menu.title}}</span>
                     </a>
                     <ul class="nav nav-sub" ng-repeat="menu_item in menu.menu_items">
                         <li ui-sref-active="active">
-                            <a md-ink-ripple ui-sref="{{menu_item.state}}">{{menu_item.title}}</a>
+                            <a md-ink-ripple ui-sref="{{menu_item.state}}">
+                            <ng-md-icon size="18" icon="{{menu_item.icon}}"></ng-md-icon>{{menu_item.title}}</a>
                         </li>
                     </ul>
                 </li>
