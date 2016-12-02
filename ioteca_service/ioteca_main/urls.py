@@ -24,4 +24,5 @@ urlpatterns = [
     url(r'^o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
 
     url(r'^api/auths/', include('ioteca_service_apps.auths_api.urls')),
+    url(r'^api/financiero/', include('apps.financiero.urls')),
 ]
